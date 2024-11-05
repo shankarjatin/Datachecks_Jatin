@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
         const day = selectedDate.getDate();
 
         try {
-          const response = await axios.get<Booking[]>('http://localhost:8000/api/hotel-data', {
+          const response = await axios.get<Booking[]>('https://datachecks-backend.onrender.com/api/hotel-data', {
             params: { year, month, day },
           });
 
